@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "rocklist"
+  "defaultProject": "rocklist",
+  "cli": {
+    "analytics": "3a7f3e71-cb96-4137-aa2d-211da7a9e368"
+  }
 }
