@@ -20,6 +20,10 @@ export class PlaylistService {
   }
 
   public create(playlist: Playlist) {
-    this.httpClient.post(`${environment.api}/playlists`, playlist);
+    this.httpClient.post<Playlist>(`${environment.api}/playlists`, playlist).subscribe();
+  }
+
+  public delete(playlist: Playlist) {
+    this.httpClient.delete<Playlist>(`${environment.api}/playlists/${playlist.id}`).subscribe();
   }
 }

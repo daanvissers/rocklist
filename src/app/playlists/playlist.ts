@@ -1,6 +1,5 @@
-import { Song } from "../songs/song";
-
 export interface Playlist {
+    id?: number,
     title: string,
-    songs: Song[];
+    songs: number[];
 }

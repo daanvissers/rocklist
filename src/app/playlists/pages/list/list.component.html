@@ -1,1 +1,29 @@
-<p>list works!</p>
+<div class="">
+
+    <mat-form-field>
+        <mat-label>Playlist name</mat-label>
+        <input matInput type="text" [(ngModel)]="newListValue">
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="newListValue=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <button mat-flat-button color="accent" (click)="createNew()">
+        Create
+    </button>
+
+</div>
+
+<mat-list>
+    <div mat-subheader>Playlists</div>
+    
+    <mat-list-item *ngFor="let playlist of playlists | async" [routerLink]="['/playlists', playlist.id]">
+        <mat-icon mat-list-icon>list</mat-icon>
+        <div mat-line>{{ playlist.title }}</div>
+        <div mat-line> 
+            <span>{{ playlist.songs.length }} songs </span>            
+        </div>
+        <span><mat-icon mat-list-icon (click)="delete(playlist)">delete</mat-icon></span>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>
