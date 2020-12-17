@@ -1,0 +1,23 @@
+<mat-toolbar color="accent">
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item disabled>
+            <mat-icon>supervised_user_circle</mat-icon>
+            <span>Artists</span>
+          </button>
+        <button mat-menu-item>
+          <mat-icon>queue_music</mat-icon>
+          <span>Playlists</span>
+        </button>
+      </mat-menu>
+
+    <span>Rocklist</span>
+</mat-toolbar>
+
+<div style="padding: 8px;">
+    <router-outlet></router-outlet>
+</div>
+
