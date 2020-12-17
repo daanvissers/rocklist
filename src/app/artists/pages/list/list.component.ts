@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Artist } from '../../artist';
+import { ArtistService } from '../../artist.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  artists: Observable<Artist[]>;
+
+  constructor(private artistService: ArtistService) {
+    this.artists = new Observable<Artist[]>();
+  }
 
   ngOnInit(): void {
+    this.artists = this.artistService.getAll();
   }
 
 }
