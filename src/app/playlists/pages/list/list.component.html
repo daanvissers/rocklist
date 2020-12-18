@@ -1,7 +1,7 @@
 <div class="create-playlist">
     <mat-form-field>
         <mat-label>Playlist name</mat-label>
-        <input matInput type="text" [(ngModel)]="newListValue">
+        <input id="newList" matInput type="text" [(ngModel)]="newListValue">
         <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="newListValue=''">
             <mat-icon>close</mat-icon>
         </button>

@@ -1,17 +1,27 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, by, element, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('Artist List', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  xit('should display welcome message', async () => {
     await page.navigateTo();
     expect(await page.getTitleText()).toEqual('rocklist app is running!');
   });
+
+  it('should be able to create new playlists', async () => {
+    await page.navigateTo();
+    const menuBtn = element(by.css('[aria-label="menu button"]'));
+    menuBtn.click();
+    element(by.buttonText('Playlists')).click();
+    element(by.id('newList')).sendKeys('Test Lijst!');
+    element(by.buttonText('Create')).click();
+    // expect(element(by.tagName('span')).getText()).toEqual('Test Lijst!');
+  })
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
