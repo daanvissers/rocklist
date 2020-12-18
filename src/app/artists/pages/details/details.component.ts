@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
+import { SelectionComponent } from 'src/app/playlists/selection/selection.component';
 import { Song } from 'src/app/songs/song';
 import { SongService } from 'src/app/songs/song.service';
 import { Artist } from '../../artist';
@@ -38,10 +39,10 @@ export class DetailsComponent implements OnInit {
   }
 
   addToPlaylist(song: Song) {
-    // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-    //   width: '250px',
-    //   data: {song: song}
-    // });
+    const dialogRef = this.dialog.open(SelectionComponent, {
+      width: '640px',
+      data: {song: song}
+    });
   }
 
   ngOnDestroy(): void {

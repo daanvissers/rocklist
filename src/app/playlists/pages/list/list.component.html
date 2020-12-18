@@ -1,5 +1,4 @@
-<div>
-
+<div class="create-playlist">
     <mat-form-field>
         <mat-label>Playlist name</mat-label>
         <input matInput type="text" [(ngModel)]="newListValue">
@@ -8,7 +7,7 @@
         </button>
     </mat-form-field>
 
-    <button mat-flat-button color="accent" (click)="createNew()">
+    <button mat-flat-button class="playlist-add-btn" color="accent" (click)="createNew()">
         Create
     </button>
 </div>

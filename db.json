@@ -4,13 +4,16 @@
       "id": 1,
       "title": "Test List",
       "songs": [
-        190,
-        1363
+        1677
       ]
     },
     {
       "title": "TestList",
-      "songs": [],
+      "songs": [
+        4,
+        1671,
+        7
+      ],
       "id": 2
     }
   ],

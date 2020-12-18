@@ -9,9 +9,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from '../app-routing.module';
+import { SelectionComponent } from './selection/selection.component';
 
 @NgModule({
-  declarations: [ItemComponent],
+  declarations: [ItemComponent, SelectionComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
@@ -23,6 +24,6 @@ import { AppRoutingModule } from '../app-routing.module';
     MatDialogModule,
   ],
   providers: [PlaylistService],
-  exports: [ItemComponent]
+  exports: [ItemComponent, SelectionComponent]
 })
 export class PlaylistsModule { }

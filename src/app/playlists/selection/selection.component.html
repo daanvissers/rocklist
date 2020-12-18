@@ -1,0 +1,9 @@
+<span>Select a playlist to add {{ song.name }} to:</span>
+
+<mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let playlist of playlists | async" (click)="addToSelected(playlist)">
+        {{ playlist.title }}
+    </mat-list-option>
+</mat-selection-list>
+
+

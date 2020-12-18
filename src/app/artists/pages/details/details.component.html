@@ -2,5 +2,5 @@
 <p>Click on a song to add it to a playlist!</p>
 
 <mat-list>
-    <app-song-item *ngFor="let song of songs | async" [song]="song"></app-song-item>
+    <app-song-item *ngFor="let song of songs | async" [song]="song" (click)="addToPlaylist(song)"></app-song-item>
 </mat-list>
