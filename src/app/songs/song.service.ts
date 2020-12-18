@@ -12,6 +12,10 @@ export class SongService {
 
   constructor(private httpClient: HttpClient) { }
 
+  public getSong(id: number): Observable<Song> {
+    return this.httpClient.get<Song>(`${environment.api}/songs/${id}`);
+  }
+
   public getSongsByArtist(artist: Artist): Observable<Song[]> {
     return this.httpClient.get<Song[]>(`${environment.api}/songs?artist=${artist.name}`);
   }

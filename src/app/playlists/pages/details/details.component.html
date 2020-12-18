@@ -1,1 +1,9 @@
-Playlist
+<div mat-subheader>Playlist "{{ playlist?.title }}"</div>
+
+<div *ngFor="let song of songs">
+    - <span *ngIf="song | async as song">"{{ song.name }}" by {{ song.artist }}</span>
+</div>
+
+
+
+
