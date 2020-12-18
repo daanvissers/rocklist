@@ -2,29 +2,5 @@
 <p>Click on a song to add it to a playlist!</p>
 
 <mat-list>
-    <mat-list-item *ngFor="let song of songs | async">
-        <mat-icon mat-list-icon>audiotrack</mat-icon>
-        <div mat-line>{{ song.name }}</div>
-        <div mat-line> 
-            <span class="song-left">
-                {{ song.album }}
-            </span>
-
-            <span class="song-right">
-                <span class="song-part">
-                    <mat-icon aria-hidden="false" aria-label="Release date icon">insert_invitation</mat-icon> 
-                    {{ song.year }}
-                </span>
-                <span class="song-part">
-                    <mat-icon aria-hidden="false" aria-label="Duration icon">schedule</mat-icon> 
-                    {{ song.duration }}
-                </span>
-                <span class="song-part">
-                    <mat-icon aria-hidden="false" aria-label="Genre icon">equalizer</mat-icon> 
-                    {{ song.genre }}
-                </span>
-            </span>
-        </div>
-        <mat-divider></mat-divider>
-    </mat-list-item>
+    <app-song-item *ngFor="let song of songs | async" [song]="song"></app-song-item>
 </mat-list>

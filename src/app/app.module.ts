@@ -19,12 +19,14 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ArtistModule } from './artists/artist.module';
+import { SongsModule } from './songs/songs.module';
+import { PlaylistsModule } from './playlists/playlists.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent,
-    ArtistListComponent,
     PlaylistsListComponent,
     SearchComponent,
     LayoutComponent,
@@ -35,6 +37,9 @@ import { MatInputModule } from '@angular/material/input';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ArtistModule,
+    SongsModule,
+    PlaylistsModule,
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
@@ -42,6 +47,7 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

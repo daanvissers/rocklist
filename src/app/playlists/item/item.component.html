@@ -1,0 +1,9 @@
+<mat-list-item>
+    <mat-icon mat-list-icon>list</mat-icon>
+    <div mat-line [routerLink]="['/playlists', playlist.id]">{{ playlist.title }}</div>
+    <div mat-line> 
+        <span>{{ playlist.songs.length }} songs </span>            
+    </div>
+    <span><mat-icon mat-list-icon (click)="delete()">delete</mat-icon></span>
+    <mat-divider></mat-divider>
+</mat-list-item>

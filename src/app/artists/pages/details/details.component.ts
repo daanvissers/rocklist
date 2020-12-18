@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { Song } from 'src/app/songs/song';
@@ -20,7 +21,7 @@ export class DetailsComponent implements OnInit {
   id: number;
 
   constructor(private artistService: ArtistService, private route: ActivatedRoute,
-              private songService: SongService) {
+              private songService: SongService, public dialog: MatDialog) {
     this.subscriptions = new Subscription();
     this.songs = new Observable<Song[]>();
     this.id = +this.route.snapshot.paramMap.get('id')!;
@@ -34,6 +35,13 @@ export class DetailsComponent implements OnInit {
     });
     
     this.subscriptions.add(artistSub);
+  }
+
+  addToPlaylist(song: Song) {
+    // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    //   width: '250px',
+    //   data: {song: song}
+    // });
   }
 
   ngOnDestroy(): void {

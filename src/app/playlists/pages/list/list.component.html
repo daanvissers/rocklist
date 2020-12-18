@@ -1,4 +1,4 @@
-<div class="">
+<div>
 
     <mat-form-field>
         <mat-label>Playlist name</mat-label>
@@ -11,19 +11,9 @@
     <button mat-flat-button color="accent" (click)="createNew()">
         Create
     </button>
-
 </div>
 
 <mat-list>
     <div mat-subheader>Playlists</div>
-    
-    <mat-list-item *ngFor="let playlist of playlists | async" [routerLink]="['/playlists', playlist.id]">
-        <mat-icon mat-list-icon>list</mat-icon>
-        <div mat-line>{{ playlist.title }}</div>
-        <div mat-line> 
-            <span>{{ playlist.songs.length }} songs </span>            
-        </div>
-        <span><mat-icon mat-list-icon (click)="delete(playlist)">delete</mat-icon></span>
-        <mat-divider></mat-divider>
-    </mat-list-item>
+    <app-playlist-item *ngFor="let playlist of playlists | async" [playlist]="playlist"></app-playlist-item>
 </mat-list>

@@ -26,4 +26,8 @@ export class PlaylistService {
   public delete(playlist: Playlist) {
     this.httpClient.delete<Playlist>(`${environment.api}/playlists/${playlist.id}`).subscribe();
   }
+
+  public addSong(playlist: Playlist, songId: number) {
+    this.httpClient.patch(`${environment.api}/playlists/${playlist.id}`, {"songs": [songId]}).subscribe();
+  }
 }
