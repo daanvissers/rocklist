@@ -20,14 +20,28 @@
       "id": 2
     },
     {
-      "title": "Playlist 1",
-      "songs": [],
-      "id": 3
+      "title": "Lijst",
+      "songs": [
+        60
+      ],
+      "id": 5
     },
     {
-      "title": "Playlist 1",
+      "title": "Rock Lijst",
+      "songs": [
+        1739
+      ],
+      "id": 6
+    },
+    {
+      "title": "Alternatieve muziek",
       "songs": [],
-      "id": 4
+      "id": 7
+    },
+    {
+      "title": "Klassiek",
+      "songs": [],
+      "id": 8
     }
   ],
   "songs": [
