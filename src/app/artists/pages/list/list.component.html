@@ -1,9 +1,4 @@
 <mat-list>
     <div mat-subheader>Artists</div>
-    <mat-list-item *ngFor="let artist of artists | async" [routerLink]="['/artists', artist.id]">
-        <mat-icon mat-list-icon>groups</mat-icon>
-        <div mat-line>{{ artist.name }}</div>
-        <div mat-line> <!-- ? --> </div>
-        <mat-divider></mat-divider>
-    </mat-list-item>
+    <app-artist-item *ngFor="let artist of artists | async" [artist]="artist"></app-artist-item>
 </mat-list>

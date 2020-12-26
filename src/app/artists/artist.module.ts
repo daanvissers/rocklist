@@ -11,11 +11,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from '../app-routing.module';
 import { ArtistService } from './artist.service';
 import { SongsModule } from '../songs/songs.module';
+import { ItemComponent as ArtistItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
     DetailsComponent,
     ArtistListComponent,
+    ArtistItemComponent,
   ],
   imports: [
     CommonModule,
